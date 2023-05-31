@@ -1,17 +1,19 @@
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: "AppHeader",
+  methods: {
+    getImageURL: function (imgPath) {
+      return new URL(imgPath, import.meta.url).href;
+    }
+  }
 }
-
 </script>
 
 
 <template>
   <nav>
     <a href="#">
-      <img src="../assets/img/favicon.ico" alt="#">
+      <img :src="getImageURL(`../assets/img/favicon.ico`)" alt="#" />
     </a>
     <ul>
       <li>
