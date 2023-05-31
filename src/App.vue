@@ -1,10 +1,20 @@
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue'
+
+export default {
+  components: {
+    AppHeader
+  }
+}
 </script>
+
 
 <template>
   <header>
-    <div class="container"></div>
+    <div class="container">
+
+      <AppHeader />
+    </div>
   </header>
 
   <main>
@@ -23,6 +33,7 @@
     <div class="container"></div>
   </footer>
 </template>
+
 
 <style lang="scss">
 @use './styles/layout.scss' as*;
