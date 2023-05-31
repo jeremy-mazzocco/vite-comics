@@ -57,8 +57,8 @@ nav {
   height: 80px;
 
   img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 
   ul {
@@ -69,10 +69,20 @@ nav {
 
     li {
       padding: 0 10px;
+      height: 80px;
+      line-height: 80px;
+
+      &:hover {
+        border-bottom: 2px solid #0282F9;
+      }
 
       a {
         color: rgb(86, 85, 85);
         text-decoration: none;
+
+        &:hover {
+          color: #0282F9;
+        }
       }
     }
   }
