@@ -57,8 +57,8 @@ nav {
   height: 80px;
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
   }
 
   ul {
@@ -71,7 +71,7 @@ nav {
       padding: 0 10px;
 
       a {
-        color: rgb(120, 118, 118);
+        color: rgb(86, 85, 85);
         text-decoration: none;
       }
     }
