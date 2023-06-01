@@ -71,7 +71,7 @@ export default {
   <div class="container">
     <nav>
       <a href="#">
-        <img :src="getImageURL(`../assets/img/favicon.ico`)" alt="#" />
+        <img :src="getImageURL(`../assets/img/dc-logo.png`)" alt="#" />
       </a>
       <ul>
         <li v-for="link in links">

@@ -196,8 +196,12 @@ export default {
 .background-footer {
   background-image: url(../assets/img/footer-bg.jpg);
 
+
   .container {
     padding: 30px 0px;
+    background-image: url(../assets/img/dc-logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
 
     .site-map-1,
     .site-map-2,
