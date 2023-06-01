@@ -4,50 +4,82 @@ export default {
   methods: {
     getImageURL: function (imgPath) {
       return new URL(imgPath, import.meta.url).href;
+    },
+  },
+  data() {
+    return {
+      links: [
+        {
+          text: "CHARACTERS",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "COMICS",
+          url: "#",
+          current: true,
+        },
+        {
+          text: "MOVIES",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "TV",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "GAMES",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "COLLECTIBLES",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "VIDEO",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "FANS",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "NEWS",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "SHOP",
+          url: "#",
+          current: false,
+        }
+      ]
     }
   }
 }
+
 </script>
 
 
 <template>
-  <nav>
-    <a href="#">
-      <img :src="getImageURL(`../assets/img/favicon.ico`)" alt="#" />
-    </a>
-    <ul>
-      <li>
-        <a href="#">CHARACTERS</a>
-      </li>
-      <li>
-        <a href="#">COMICS</a>
-      </li>
-      <li>
-        <a href="#">MOVIES</a>
-      </li>
-      <li>
-        <a href="#">TV</a>
-      </li>
-      <li>
-        <a href="#">GAMES</a>
-      </li>
-      <li>
-        <a href="#">COLLECTIBLES</a>
-      </li>
-      <li>
-        <a href="#">VIDEO</a>
-      </li>
-      <li>
-        <a href="#">FANS</a>
-      </li>
-      <li>
-        <a href="#">NEWS</a>
-      </li>
-      <li>
-        <a href="#">SHOP</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav>
+      <a href="#">
+        <img :src="getImageURL(`../assets/img/favicon.ico`)" alt="#" />
+      </a>
+      <ul>
+        <li v-for="link in links">
+          <a :class="link.current ? 'active' : ''" :href="link.url">{{ link.text }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 
@@ -82,6 +114,7 @@ nav {
         color: rgb(86, 85, 85);
         text-decoration: none;
 
+        &.active,
         &:hover {
           color: #0282F9;
         }

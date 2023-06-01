@@ -1,9 +1,11 @@
 <script>
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    AppFooter
   }
 }
 </script>
@@ -11,26 +13,18 @@ export default {
 
 <template>
   <header>
-    <div class="container">
-
-      <AppHeader />
-    </div>
+    <AppHeader />
   </header>
+
 
   <main>
     <div class="text">
-      <div class="container"></div>
-    </div>
-    <div class="jumbotron">
-      <div class="container"></div>
-    </div>
-    <div class="site-map">
-      <div class="container"></div>
+
     </div>
   </main>
 
   <footer>
-    <div class="container"></div>
+    <AppFooter />
   </footer>
 </template>
 
