@@ -34,7 +34,7 @@ export default {
 
 
 <template>
-  <div class="jumbotron-footer">
+  <div class="footer">
     <div class="container">
       <ul>
         <li v-for="link in jumbrotronLinks">
@@ -165,7 +165,7 @@ export default {
 
 
 <style lang="scss" scoped>
-.jumbotron-footer {
+.footer {
   height: 100px;
   background-color: #0282F9;
 
