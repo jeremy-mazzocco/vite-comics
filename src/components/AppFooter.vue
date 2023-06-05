@@ -165,19 +165,19 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../styles/partiarls/mixins.scss' as *;
+@use '../styles/partiarls/colors.scss' as *;
+
 .footer {
   height: 100px;
-  background-color: #0282F9;
+  background-color: $dcBlue;
 
   .container {
 
     ul {
+      @include my-dislay-flex;
       height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       font-size: 10px;
-      list-style-type: none;
 
       li {
         color: white;
@@ -218,8 +218,7 @@ export default {
 
       ul {
         font-size: 10px;
-        list-style-type: none;
-        color: rgb(124, 122, 122);
+        color: $footerGray;
 
       }
     }
@@ -239,20 +238,20 @@ export default {
     button {
       padding: 5px 10px;
       color: white;
-      border: 2px solid #0282F9;
+      border: 2px solid $dcBlue;
       background-color: #303030;
     }
 
     .social-network {
       span {
-        color: #0282F9;
+        color: $dcBlue;
         font-weight: bold;
       }
 
       i {
         padding: 0px 5px;
         font-size: 22px;
-        color: rgb(124, 122, 122);
+        color: $footerGray;
         vertical-align: middle;
       }
     }

@@ -95,7 +95,7 @@ export default {
     </div>
     <div class="bcc-container">
         <div class="container">
-            <Card v-for="card in cards" :details="card" />
+            <Card v-for="(card, index) in cards" :details="card" :key="index" />
         </div>
     </div>
 </template>

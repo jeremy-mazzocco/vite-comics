@@ -84,10 +84,11 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../styles/partiarls/mixins.scss' as *;
+@use '../styles/partiarls/colors.scss' as *;
+
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include my-dislay-flex;
   height: 80px;
 
   img {
@@ -96,10 +97,9 @@ nav {
   }
 
   ul {
-    display: flex;
+    @include my-dislay-flex;
     font-size: 12px;
     font-weight: bold;
-    list-style-type: none;
 
     li {
       padding: 0 10px;
@@ -107,7 +107,7 @@ nav {
       line-height: 80px;
 
       &:hover {
-        border-bottom: 2px solid #0282F9;
+        border-bottom: 2px solid $dcBlue;
       }
 
       a {
@@ -116,7 +116,7 @@ nav {
 
         &.active,
         &:hover {
-          color: #0282F9;
+          color: $dcBlue;
         }
       }
     }
